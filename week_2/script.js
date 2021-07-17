@@ -32,15 +32,57 @@ console.log(temp(3,6));
 
 
 //CLO5: JavaScript
-var clickButton = function('click',function(){
+var clickButton = ('click', function(){
     console.log(this)
-}
-console.log(clickButton())
-
+})  
+console.log(clickButton);
+// OutPut: Undefined
     
 
+//CLO6: JavaScript
+var clickButton = function(){
+    console.log(this);
+}
+clickButton;
+// OutPut: Undefined
 
 
+//CLO7: JavaScript
+var clickButton = () => {
+    console.log(this);
+}
+clickButton();
+// OutPut: Undefined 
+
+
+//CLO8: JavaScript
+var person = {
+    name: 'David Smith',
+    age: 56,
+    details: function(){
+        console.log(this);
+    }
+}
+person.details();
+// OutPut: f (){
+
+
+//CLO9: JavaScript
+var person = {
+    name: 'David Smith',
+    age: 56,
+    details: () => {
+        console.log(this);
+    }
+}
+person.details();
+// OutPut: Undefined 
+
+
+//CLO10: JavaScript
+var temp = () => 100;
+console.log(temp())
+// OutPut: 100
 
 
 
